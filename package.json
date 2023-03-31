@@ -1,0 +1,18 @@
+{
+  "name": "add-ids-to-document",
+  "version": "1.0.4",
+  "description": "helper to add ids to each word of the document",
+  "repository": "https://github.com/iffat-kalsoom1/IdsToDocument",
+  "main": "index.ts",
+  "scripts": {
+    "build": "ts-node",
+    "release": "git add . && git commit && npm version patch && npm run build && npm publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3"
+  }
+}

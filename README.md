@@ -1,0 +1,2 @@
+-This library takes an xml document
+-It traverses the file and add ids to each tag in the document
