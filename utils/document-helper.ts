@@ -2,7 +2,7 @@ export function addIdsToWords(document: Document): void {
     let idCounter = 0;
   
     // Get all relevant elements in the document
-    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, h7, span, b, a');
+    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, h7, span, b, a, div');
   
     // Loop through each element
     for (let i = 0; i < elements.length; i++) {
