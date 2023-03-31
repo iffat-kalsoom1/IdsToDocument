@@ -1,15 +1,16 @@
-export function addIdsToWords(document: Document): void {
+export function addIdsToWords(document: Document): Document {
     let idCounter = 0;
   
+    const formattedDocument = document;
     // Get all relevant elements in the document
-    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, h7, span, b, a, div');
+    const elements = formattedDocument.querySelectorAll('p, h1, h2, h3, h4, h5, h6, h7, span, b, a, div');
   
     // Loop through each element
     for (let i = 0; i < elements.length; i++) {
       const element = elements[i];
   
       // Create a document fragment to hold the new <span> elements
-      const fragment = document.createDocumentFragment();
+      const fragment = formattedDocument.createDocumentFragment();
   
       // Add the element itself to the stack
       const stack: ChildNode[] = [element];
@@ -32,11 +33,11 @@ export function addIdsToWords(document: Document): void {
                   const word = words[k];
   
                   // Create a new <span> element with a unique id attribute
-                  const newSpan = document.createElement('span');
+                  const newSpan = formattedDocument.createElement('span');
                   newSpan.setAttribute('id', idCounter.toString());
   
                   // Create a text node containing the word
-                  const textNode = document.createTextNode(word);
+                  const textNode = formattedDocument.createTextNode(word);
   
                   // Append the text node to the <span> element
                   newSpan.appendChild(textNode);
@@ -45,7 +46,7 @@ export function addIdsToWords(document: Document): void {
                   fragment.appendChild(newSpan);
   
                   // Add a space character to the fragment
-                  fragment.appendChild(document.createTextNode(' '));
+                  fragment.appendChild(formattedDocument.createTextNode(' '));
   
                   // Increment the id counter
                   idCounter++;
@@ -63,5 +64,6 @@ export function addIdsToWords(document: Document): void {
       element.innerHTML = '';
       element.appendChild(fragment);
     }
+    return formattedDocument;
   }
   
