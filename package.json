@@ -5,7 +5,7 @@
   "repository": "https://github.com/iffat-kalsoom1/IdsToDocument",
   "main": "index.ts",
   "scripts": {
-    "build": "ts-node",
+    "build": "ts-node index.ts",
     "release": "git add . && git commit && npm version patch && npm run build && npm publish"
   },
   "keywords": [],
