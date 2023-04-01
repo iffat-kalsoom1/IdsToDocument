@@ -3,7 +3,7 @@ export function addIdsToWords(document: Document): Document {
   
     const formattedDocument = document;
     // Get all relevant elements in the document
-    const elements = formattedDocument.querySelectorAll('p, h1, h2, h3, h4, h5, h6, h7, span, b, a, div');
+    const elements = formattedDocument.querySelectorAll('p, h1, h2, h3, h4, h5, h6, h7, span, b, a');
   
     // Loop through each element
     for (let i = 0; i < elements.length; i++) {
