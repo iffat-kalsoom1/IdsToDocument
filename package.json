@@ -1,6 +1,6 @@
 {
   "name": "add-ids-to-document",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "helper to add ids to each word of the document",
   "repository": "https://github.com/iffat-kalsoom1/IdsToDocument",
   "main": "index.ts",
