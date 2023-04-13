@@ -6,9 +6,10 @@ Function to add ids to each TEXT_NODE in the given document.
 
     npm i add-ids-to-document
 
-> usage
+> Usage
 
     import { addIdsToWords } from 'add-ids-to-document';
-    // Pass a Document to the function
-   addIdsToWords(doc);
+   
+   	// Pass a Document to the function
+	addIdsToWords(doc);
     // Output: returns a new document with sequential ids in each TEXT_NODE
